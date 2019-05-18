@@ -1,0 +1,21 @@
+GRAPH
+
+Suatu graph didefinisikan oleh himpunan verteks dan himpunan sisi (edge). keterhubungan antara verteks. Biasanya untuk suatu graph G digunakan notasi matematis. Verteks menyatakan entitas-entitas data dan sisi menyatakan G = (V, E) Dimana :
+G = Graph
+V = Simpul atau Vertex, atau Node, atau Titik
+E = Busur atau Edge, atau arc
+
+V adalah himpunan verteks dan E himpunan sisi yang terdefinisi antara pasangan-pasangan verteks. Sebuah sisi antara verteks x dan y ditulis {x,y}. Suatu graph H = (V1, E1) disebut subgraph dari graph G jika V1 adalah himpunan bagian dari V dan E1 himpunan bagian dari E. Cara pendefinisian lain untuk graph adalah dengan menggunakan himpunan keterhubungan langsung Vx. Pada setiap verteks x terdefinisi Vx sebagai himpunan dari verteks-verteks yang adjacent dari x. Secara formal: Vx = {y | (x,y) -> E}
+
+
+Dalam digraph didefinisikan juga terminologi-terminologi berikut ini.Predesesor dari suatu verteks x (ditulis Pred(x)) adalah himpunan semua vertex yang adjacent ke x. Suksesor dari verteks x (ditulis Succ(x)) adalah himpunan
+
+Pokok bahasan sebelumnya menjelaskan bahwa graf menampilkan visualisasi data dan hubungannya. Sedangkan jika berbicara masalah implementasi struktur data graf itu sendiri, isu utama yang dihadapi adalah bagaimana informasi itu disimpan dan dapat diakses dengan baik, ini yang dapat disebut dengan representasi internal.
+
+Secara umum terdapat dua macam representasi dari struktur data graf yang dapat diimplementasi. Pertama, disebut adjacency list, dan diimplementasi dengan menampilkan masing-masing simpul sebagai sebuah struktur data yang mengandung senarai dari semua simpul yang saling berhubungan. Yang kedua adalah representasi berupa adjacency matrix dimana baris dan kolom dari matriks (jika dalam konteks implementasi berupa senarai dua dimensi) tersebut merepresentasikan simpul awal dan simpul tujuan dan sebuah entri di dalam senarai yang menyatakan apakah terdapat sisi di antara kedua simpul tersebut.
+
+1. Adjacency List
+Dalam teori graf, adjacency list merupakan bentuk representasi dari seluruh sisi atau busur dalam suatu graf sebagai suatu senarai. Simpul-simpul yang dihubungkan sisi atau busur tersebut dinyatakan sebagai simpul yang saling terkait. Dalam implementasinya, hash table digunakan untuk menghubungkan sebuah simpul dengan senarai berisi simpul-simpul yang saling terkait tersebut.
+
+2. Adjacency Matrix
+Adjacency Matrix merupakan representasi matriks nxn yang menyatakan hubungan antar simpul dalam suatu graf. Kolom dan baris dari matriks ini merepresentasikan simpul-simpul, dan nilai entri dalam matriks ini menyatakan hubungan antar simpul, apakah terdapat sisi yang menghubungkan kedua simpul tersebut. Pada sebuah matriks nxn, entri non-diagonal aij merepresentasikan sisi dari simpul i dan simpul j. Sedangkan entri diagonal aii menyatakan sisi kalang(loop) pada simpul i.

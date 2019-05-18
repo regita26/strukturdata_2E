@@ -1,0 +1,115 @@
+STACK AND QUEUE
+1. Stack (Tumpukan) adalah kumpulan elemen-elemen data yang disimpan dalam satu lajur linear. Kumpulan elemen-elemen data hanya boleh diakses pada satu lokasi saja yaitu posisi ATAS (TOP) tumpukan. 
+Operasi yang sering diterapkan pada struktur data Stack (Tumpukan) adalah Push dan Pop. Operasi – operasi yang dapat diterapkan adalah sebagai berikut :
+
+1. Push : digunakan untuk menembah item pada Stack pada Tumpukan paling atas.
+2. Pop : digunakan untuk mengambil item pada Stack pada Tumpukan paling atas.
+3. Clear : digunakan untuk mengosongkan Stack.
+4. Create Stack : membuat Tumpukan baru S, dengan jumlah elemen kosong.
+5. MakeNull : mengosongkan Tumpukan S, jika ada elemen maka semua elemen dihapus.
+6. IsEmpty : fungsi yang digunakan untuk mengecek apakah Stack sudah kosong.
+7. Isfull : fungsi yang digunakan untuk mengecek apakah Stack sudah penuh.
+contoh:
+class Stack:
+     def __init__(self):
+         self.items = []
+
+     def isEmpty(self):
+         return self.items == []
+
+     def push(self, item):
+         self.items.append(item)
+
+     def pop(self):
+         return self.items.pop()
+
+     def peek(self):
+         return self.items[len(self.items)-1]
+
+     def size(self):
+         return len(self.items)
+s=Stack()
+s.push('hello')
+s.push('true’)
+print(s.isEmpty)
+print(s.peek()) 
+While not s.isEmpty()
+print(s.pop())
+
+s.pop()
+s.pop()
+print(s.pop())
+
+2. Queue (Antrian) adalah suatu struktur data linear. Konsepnya hampir sama dengan Stack, perbedaannya adalah operasi penambahan dan penghapusan pada ujung yang bebeda. Penghapusan dilakukan pada bagian depan (front) dan penambahan berlaku pada bagian belakang (Rear).
+
+Operasi-operasi yang dapat diterapkan dalam Queue sebagai berikut :
+1. Create Queue (Q) : membuat antrian baru Q, dengan jumlah elemen kosong.
+2. Make NullQ (Q) : mengosongkan antrian Q, jika ada elemen maka semua elemen dihapus.
+3. EnQueue : berfungsi memasukkan data kedalam antrian.
+4. DeqQueue : berfungsi mengeluarkan data terdepan dari antrian.
+5. Clear : Menghapus seluruh Antrian
+6. IsEmpty : memeriksa apakah antrian kosong
+7. IsFull : memeriksa apakah antrian penuh.
+contoh:
+class Queue:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def enqueue(self, item):
+        self.items.insert(0,item)
+
+    def dequeue(self):
+        return self.items.pop() 
+
+    def size(self):
+        return len(self.items)
+
+q=Queue()
+q.enqueue(4)
+q.enqueue('dog')
+q.enqueue(True)
+print(q.size())
+print(q.dequeue())
+
+3. DeQueue
+dikenal sebagai antrian berujung dua, adalah kumpulan barang yang dipesan mirip dengan antrian. DeQueue Ini memiliki dua ujung, depan dan belakang, dan item tetap diposisikan dalam koleksi.
+berikut perintah yang ada pada DeQueue:
+1. Deque () membuat deque baru yang kosong. Tidak perlu parameter dan mengembalikan deque kosong.
+2. addFront (item) menambahkan item baru ke depan deque. Perlu item dan tidak mengembalikan apa pun.
+3. addRear (item) menambahkan item baru ke bagian belakang deque. Perlu item dan tidak mengembalikan apa pun.
+4. removeFront () menghapus item depan dari deque. Tidak perlu parameter dan mengembalikan item. Deque dimodifikasi.
+5. removeRear () menghapus item belakang dari deque. Tidak perlu parameter dan mengembalikan item. Deque dimodifikasi.
+6. isEmpty () menguji untuk melihat apakah deque kosong. Tidak perlu parameter dan mengembalikan nilai boolean.
+7. size () mengembalikan jumlah item dalam deque. Tidak perlu parameter dan mengembalikan integer.
+contoh : 
+class deQueue:
+    def __init__(self):
+        self.items = []
+
+    def isEmpty(self):
+        return self.items == []
+
+    def addrear(self, item):
+        self.items.insert(0,item)
+
+    def removefront(self):
+        return self.items.pop() 
+
+     def addfront(self,item)
+    self.item.append()
+
+     def removerear(self)
+    return self.items.pop(0,item)
+    
+    def size(self):
+        return len(self.items)
+
+q=deQueue()
+q.enqueue(4)
+q.enqueue('dog')
+q.enqueue(True)
+print(q.size())
+print(q.dequeue())
